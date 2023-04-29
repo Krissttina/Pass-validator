@@ -7,7 +7,7 @@ const passLabel = document.querySelector(".strength-label");
 passInput.addEventListener("input", handlePassInput);
 toggleIcon.addEventListener("click", togglePassInput);
 
-function handlePassInput(e) {
+function handlePassInput() {
   if (passInput.value.length === 0) {
     passLabel.innerHTML = "Strength";
     addClass();
@@ -32,12 +32,12 @@ function addClass(className) {
   }
 }
 
-function togglePassInput(e) {
+function togglePassInput() {
   const type = passInput.getAttribute("type");
   if (type === "password") {
     passInput.setAttribute("type", "text");
     toggleIcon.innerHTML = "🔓";
-    // toggleIcon.innerHTML = "🐵";
+    //toggleIcon.innerHTML = "🐵";
     ripple.style.cssText = `
     border-radius: 4px;
     right: 17px;
@@ -53,7 +53,6 @@ function togglePassInput(e) {
   } else {
     passInput.setAttribute("type", "password");
     toggleIcon.innerHTML = "🔒";
-    // toggleIcon.innerHTML = "🙈";
     toggleIcon.style.fontSize = "18px";
     ripple.style.cssText = `
     border-radius: 50%;

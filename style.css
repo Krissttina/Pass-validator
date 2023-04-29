@@ -12,10 +12,6 @@
     place-content: center;
   }
   
-  .input-container {
-    width: 300px;
-  }
-  
   .input-group {
     position: relative;
     display: flex;
